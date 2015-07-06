@@ -12,4 +12,7 @@ var whoDat = prompt('enter your name'),
       email: yourEmail,
       movie: yourMovie
     };
-console.log(disFoo);
+    console.log(disFoo);
+	document.querySelector('.results').innerHTML = '<ul><li>' + disFoo.name + '</li>' +
+													'<li>' + disFoo.email + '</li>' +
+													'<li>' + disFoo.movie + '</li></ul>';
