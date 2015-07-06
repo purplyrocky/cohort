@@ -13,6 +13,7 @@ var num1 = prompt('enter a number'),
 
     if(!isNaN(parsed1) && !isNaN(parsed2)){
       console.log(answer);
+      document.querySelector('.results').innerHTML = '<p>' + answer + '</p>';
     } else {
       alert('you did not enter a number');
     }
