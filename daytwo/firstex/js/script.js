@@ -9,7 +9,8 @@
 var num1 = prompt('enter a starting number'),
     parsed1 = parseInt(num1),
     num2 = prompt('enter an ending number'),
-    parsed2 = parseInt(num2);
+    parsed2 = parseInt(num2),
+    results = document.querySelector('.results');
 
 if(isNaN(parsed1) || isNaN(parsed2)){
   alert('you did not enter a number');
@@ -19,8 +20,10 @@ if(isNaN(parsed1) || isNaN(parsed2)){
   for(i = parsed1; i < parsed2; i++){
       if(i % 2 === 0){
         console.log(i + ' is even');
+        results.innerHTML += '<p>' + i + ' is even</p>'
       } else {
         console.log(i + ' is odd');
+        results.innerHTML += '<p>' + i + ' is odd</p>'
       }
     }
 }
