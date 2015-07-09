@@ -56,5 +56,5 @@ for(var i = 0; i < 2; i++){
   //call the debit function and subtract from the balance
   CHASE.debit(amount);
 }
-document.querySelector('.results').innerHTML = '<p>' + amount + '</p>';
+document.querySelector('.results').innerHTML = '<p>' + CHASE.balance + '</p>';
 console.log(CHASE.balance);
