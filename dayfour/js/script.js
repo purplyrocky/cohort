@@ -32,5 +32,4 @@ function e(nodeType, text, attributes, styles, selector){
 }
 for(i = 0; i < movies.length; i++){
     var li = e("li", movies[i][0], {}, {}, '#ul');
-    document.body.appendChild(li);
 }
