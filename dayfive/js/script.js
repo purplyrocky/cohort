@@ -17,18 +17,17 @@ function Movie(title, runtime, year, genres, desc) {
 }
 //Add the following functions to the Movie constructors prototype:
 //runTHrs - Should return the running time in hours
-Movie.prototype = {
-	timeHrs: function timeHrs(){
-		var remainingMin = this.runtime % 60;
-		var hrs = Math.floor(this.runtime /60);
-		return hrs + "hr " +remainingMin + "min";
-	}
-};
+
 //preview - Should return the first 50 characters of the desc followed by a "..."
 Movie.prototype = {
 	preview: function preview(){
 		var preDesc = this.desc.slice(0, 50);
 		return preDesc + "...";
+	},
+	timeHrs: function timeHrs(){
+		var remainingMin = this.runtime % 60;
+		var hrs = Math.floor(this.runtime / 60);
+		return hrs + "hr " + remainingMin + "min";
 	}
 };
 
@@ -47,9 +46,11 @@ document.querySelector('#btn').addEventListener('click', function(evt){
 	}
 	var description = document.querySelector('#desc').value;	
 
-	var movieIns = new Movie(movieTitle, runTime, yr, genreInput, description);	
-	
-	var li = e("li", movieIns.title + ' ' + movieIns.timeHrs(), {rel:description.preview()}, {});
+	var movieIns = new Movie(movieTitle, runTime, yr, genreInput, description);
+
+	console.log(movieIns);
+
+	var li = e("li", movieIns.title + ' ' + movieIns.timeHrs(), {rel:movieIns.preview()}, {});
     var ul = document.getElementById("ul");
 	ul.appendChild(li);
 
