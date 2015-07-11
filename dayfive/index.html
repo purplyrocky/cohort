@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Day5</title>
+	<!--Bootstrap CSS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!--Custom CSS
+	<link rel="stylesheet" href="css/style.css">-->
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-6">
+		<h1>Day Five</h1>
+		<p>This program will take the user's input and create a list that will display on the page.</p>
+		<input type="text" id="title" class="form-control" placeholder="Movie">
+		<input type="number" id="time" class="form-control" placeholder="Time (mins)">
+		<input type="number" id="year" class="form-control" placeholder="Year">
+		<div class="checkbox">
+			<label class="radio">
+				<input type="radio" name="genre" value="Family">
+				Family
+			</label>
+			<label class="radio">
+				<input type="radio" name="genre" value="Action">
+				Action
+			</label>
+			<label class="radio">
+				<input type="radio" name="genre" value="Comedy">
+				Comedy
+			</label>
+			<label class="radio">
+				<input type="radio" name="genre" value="Drama">
+				Drama
+			</label>
+			<label class="radio">
+				<input type="radio" name="genre" value="Horror">
+				Horror
+			</label>
+		</div>
+		<textarea class="form-control" id="desc" rows="5"></textarea>
+		<button id="btn" type="submit" class="btn btn-default">Submit</button>
+		</div>
+		<div class="col-sm-5">
+		<h1>Movies</h1>
+		<ul id="ul"></ul>
+		</div>
+	</div>
+
+
+	<!--JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!--Bootstrap JS-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--Custom JS-->
+	<script src="js/script.js"></script>
+</body>
+</html>
